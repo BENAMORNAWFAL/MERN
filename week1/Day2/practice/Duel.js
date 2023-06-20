@@ -20,7 +20,7 @@ class Unit{
     play=(n)=>this.resilience+=n;
     play2=(n)=>this.power+=n;
     show=()=> console.log(`${this.name} , ${this.cost} , ${this.power} , ${this.resilience}`)
-    
+    attack=(unit)=> console.log(`the ${this.name} attack the ${unit.name}`)
 }
 
 
@@ -38,3 +38,4 @@ Unit1.play(n=-2);
 Unit1.show();
 Unit1.play2(n=2);
 Unit1.show();
+Unit1.attack(Unit2)
