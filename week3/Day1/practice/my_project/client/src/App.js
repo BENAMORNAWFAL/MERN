@@ -2,6 +2,7 @@ import './App.css';
 import Detail from './components/Detail';
 import Main from './components/Main';
 import {Routes,Route} from 'react-router-dom'
+import Update from './components/Update';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Main/>}/>
         <Route path='/product/:id' element={<Detail/>}/>
+        <Route path="/product/:id/edit" element={<Update/>}/>
       </Routes>
     </div>
   );
