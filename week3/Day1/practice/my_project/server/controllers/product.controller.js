@@ -1,5 +1,5 @@
 const Product = require("../models/product.model")
-console.log(Product);
+
 
 
     // READ ALL
@@ -28,10 +28,9 @@ console.log(Product);
     };
     
     //READ ONE
-    module.exports.findOneSingleProduct = (req, res) => {
-        Product.findOne({ _id: req.params.id })
-            .then(oneProduct => {
-                res.json({ Product: oneProduct })
+    module.exports.findOneProduct = (req, res) => {
+        Product.findOne({ _id:req.params.id })
+            .then(oneProduct => {res.json( oneProduct )
             })
             .catch((err) => {
                 res.json({ message: 'I am in controller read one : Something went wrong', error: err })

@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Partone from './Partone';
+import ProductList from './ProductList';
 
 
 const Main = (props) => {
@@ -21,6 +22,8 @@ const Main = (props) => {
     return (
         <div>
            <Partone setLoaded={setLoaded}/>
+           <hr/>
+           {loaded && <ProductList product={products}/>}
         </div>
     )
 }
