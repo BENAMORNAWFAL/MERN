@@ -41,7 +41,8 @@ const Update = (props) => {
                 <input type='number' class="form-control" onChange={(e)=>{setPrice(e.target.value)}} value={price}/><br />
                 <label >Description : </label>
                 <textarea class="form-control" onChange={(e)=>{setDescription(e.target.value)}} value={description}/><br />
-                <button>Update</button><Link to={"/"}>Home</Link>
+                <button>Update</button>
+                <Link to={"/"}>Home</Link>
             </form>
         </div>
     )
